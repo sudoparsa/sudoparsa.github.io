@@ -4,7 +4,6 @@ author_profile: true
 redirect_from: 
    - /about/
    - /about.html
-layout: home
 title: "Parsa Hosseini"
 subtitle: "PhD Student in Computer Science | University of Maryland"
 ---
