@@ -1,6 +1,7 @@
 ---
 permalink: /
-title: "Academic Pages is a ready-to-fork GitHub Pages template for academic personal websites"
+title: "Parsa Hosseini"
+subtitle: "AI Researcher | PhD @ UMD
 author_profile: true
 redirect_from: 
   - /about/
