@@ -11,7 +11,7 @@ I am a first-year PhD student in Computer Science at the University of Maryland,
 My research focuses on **robustness in AI models**. 
 I am particularly interested in understanding the limitations of AI systems and developing methods to detect & mitigate biases.
 
-<small> 📜 **BSc in Computer Engineering**, Sharif University of Technology  
+<span class="small-text">📜 **BSc in Computer Science, Sharif University of Technology**</span>  
 ---
 
 ## 📰 News & Updates  
