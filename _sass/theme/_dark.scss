@@ -1,31 +1,31 @@
 /* ==========================================================================
-   COOL DARK THEME
+   COOL DARK BLUE THEME
    ========================================================================== */
 
-/* Refined dark color palette */
-$gray                       : #8a8f98;
-$dark-gray                  : #2a2d32;
-$darker-gray                : #1e2025;
-$light-gray                 : #b0b3ba;
+/* Refined dark blue color palette */
+$gray                       : #a0a8b3;
+$dark-gray                  : #38404e;
+$darker-gray                : #252c3a;
+$light-gray                 : #ccd3db;
 
-$background                 : #121212; /* Deep black for a premium feel */
-$background-light           : #1a1a1a; /* Darker gray for contrast */
-$background-lighter         : #242424; /* Slightly lighter for card sections */
-$text                       : #e0e0e0; /* Soft white for readability */
-$link                       : #00bcd4; /* Vibrant cyan-blue for a futuristic touch */
-$link-dark                  : #008ba3; /* Darker cyan for hover effects */
-$link-light                 : #80deea; /* Softer light-blue for visited links */
+$background                 : #0a192f; /* Deep navy blue */
+$background-light           : #112240; /* Slightly lighter blue for contrast */
+$background-lighter         : #1b2b48; /* Used for card sections and highlights */
+$text                       : #e5e9f0; /* Soft white for readability */
+$link                       : #64ffda; /* Neon cyan-blue for futuristic contrast */
+$link-dark                  : #32d4b6; /* Darker cyan for hover effects */
+$link-light                 : #99ffee; /* Lighter cyan for visited links */
 
 /* Accent colors for warnings, notifications, etc. */
 $danger-color               : #ff5370; /* Bright red */
-$info-color                 : #00acc1; /* Teal-blue */
+$info-color                 : #0db9d7; /* Vibrant light blue */
 $notice-color               : #546e7a; /* Muted gray-blue */
-$success-color              : #69f0ae; /* Neon green */
+$success-color              : #26de81; /* Neon green */
 $warning-color              : #ffb300; /* Bold yellow-orange */
 
 /* Other UI settings */
 $border-radius              : 6px; /* Slightly rounded corners for a sleek look */
-$box-shadow                 : 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+$box-shadow                 : 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
 $global-transition          : all 0.25s ease-in-out; /* Smooth animations */
 $masthead-height            : 80px;
 $navicon-width              : 30px;
@@ -38,7 +38,7 @@ $sidebar-screen-min-width   : 1100px;
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
     --global-border-color               : #{$background-light};
-    --global-code-background-color      : #1e1e1e; /* Darker background for code sections */
+    --global-code-background-color      : #1b2b48; /* Darker navy for code sections */
     --global-code-text-color            : #f8f8f2; /* Light text for readability */
     --global-fig-caption-color          : #{$dark-gray};
     --global-link-color                 : #{$link};
