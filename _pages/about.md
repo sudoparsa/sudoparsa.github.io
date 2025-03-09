@@ -24,5 +24,8 @@ I am particularly interested in understanding the limitations of AI systems and 
 
 ---
 
+<!--
 ## 🔗 Quick Links  
 📄 [Google Scholar](#) | 🔬 [Research](#) | 📂 [Publications](#) | 📝 [Blog](#)  
+
+-->
