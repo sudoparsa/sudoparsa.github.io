@@ -1,7 +1,5 @@
 ---
 permalink: /
-title: "Parsa Hosseini"
-subtitle: "AI Researcher | PhD @ UMD"
 author_profile: true
 redirect_from: 
   - /about/
@@ -9,11 +7,11 @@ redirect_from:
 ---
 
 ## 🧑‍💻 About Me  
-I am a **PhD student in Computer Science at the University of Maryland**, advised by **Prof. Soheil Feizi**.  
+I am a first-year PhD student in Computer Science at the University of Maryland, advised by **Prof. Soheil Feizi**.  
 My research focuses on **robustness in AI models**. 
-I am particularly interested in understanding the **limitations of AI systems** and developing methods to **detect & mitigate biases**.
+I am particularly interested in understanding the limitations of AI systems and developing methods to detect & mitigate biases.
 
-📜 **BSc in Computer Engineering**, Sharif University of Technology  
+<small> 📜 **BSc in Computer Engineering**, Sharif University of Technology  
 ---
 
 ## 📰 News & Updates  
