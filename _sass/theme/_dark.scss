@@ -1,51 +1,52 @@
 /* ==========================================================================
-   DARK THEME
+   MODERN DARK BLUE THEME
    ========================================================================== */
 
-/* Color codes used for the theme */
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
+/* Core Colors */
+$gray                       : #8a8f98;
+$dark-gray                  : #38404e;
+$darker-gray                : #252c3a;
+$light-gray                 : #ccd3db;
 
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
+/* Background Colors */
+$background                 : #0a192f; /* Deep navy blue */
+$background-light           : #112240; /* Slightly lighter for contrast */
+$background-lighter         : #1b2b48; /* Used for section highlights */
+$text                       : #e5e9f0; /* Soft white for readability */
+$link                       : #64ffda; /* Neon cyan for high contrast */
+$link-dark                  : #32d4b6; /* Darker cyan for hover effects */
+$link-light                 : #99ffee; /* Softer light cyan for visited links */
 
-/* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+/* Accent Colors */
+$danger-color               : #ff5370; /* Bright red */
+$info-color                 : #0db9d7; /* Vibrant light blue */
+$notice-color               : #546e7a; /* Muted gray-blue */
+$success-color              : #26de81; /* Neon green */
+$warning-color              : #ffb300; /* Bold yellow-orange */
 
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
+/* UI Settings */
+$border-radius              : 8px; /* More rounded corners for modern UI */
+$box-shadow                 : 0 4px 10px rgba(0, 0, 0, 0.2); /* Smooth shadow */
+$global-transition          : all 0.25s ease-in-out; /* Smooth animations */
+$masthead-height            : 80px;
+$navicon-width              : 30px;
+$navicon-height             : 5px;
+$sidebar-link-max-width     : 270px;
+$sidebar-screen-min-width   : 1100px;
 
-/* Dark theme for the site */
+/* Dark Theme for the Site */
 :root {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
     --global-border-color               : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
+    --global-code-background-color      : #1b2b48; /* Darker navy for code sections */
+    --global-code-text-color            : #f8f8f2; /* Light text for readability */
     --global-fig-caption-color          : #{$dark-gray};
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
     --global-link-color-visited         : #{$link-light};    
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};    
+    --global-masthead-link-color-hover  : #{$background-lighter};    
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$background-lighter};
