@@ -1,33 +1,36 @@
 /* ==========================================================================
-   MODERN DARK BLUE THEME
+   ULTIMATE DARK THEME - MODERN & HIGH-CONTRAST
    ========================================================================== */
 
-/* Core Colors */
-$gray                       : #8a8f98;
-$dark-gray                  : #38404e;
-$darker-gray                : #252c3a;
-$light-gray                 : #ccd3db;
+/* Base Colors */
+$gray                       : #aab2bf;
+$dark-gray                  : #2a2f3a;
+$darker-gray                : #1c1f26;
+$light-gray                 : #ccd6f6;
 
 /* Background Colors */
 $background                 : #0a192f; /* Deep navy blue */
-$background-light           : #2a3a5e; /* Slightly lighter for contrast */
-$background-lighter         : #64ffda; /* Used for section highlights */
+$background-light           : #112240; /* Lighter navy for contrast */
+$background-lighter         : #1b2b48; /* Section highlights */
 $text                       : #e5e9f0; /* Soft white for readability */
-$link                       : #64ffda; /* Neon cyan for high contrast */
-$link-dark                  : #32d4b6; /* Darker cyan for hover effects */
+$link                       : #64ffda; /* Neon cyan links */
+$link-dark                  : #36d4b6; /* Slightly darker cyan for hover */
 $link-light                 : #99ffee; /* Softer light cyan for visited links */
 
 /* Accent Colors */
-$danger-color               : #ff5370; /* Bright red */
-$info-color                 : #0db9d7; /* Vibrant light blue */
-$notice-color               : #546e7a; /* Muted gray-blue */
+$danger-color               : #ff5370; /* Vibrant red */
+$info-color                 : #0db9d7; /* Light neon blue */
+$notice-color               : #546e7a; /* Gray-blue for secondary text */
 $success-color              : #26de81; /* Neon green */
-$warning-color              : #ffb300; /* Bold yellow-orange */
+$warning-color              : #ffb300; /* Bright orange */
 
-/* UI Settings */
-$border-radius              : 8px; /* More rounded corners for modern UI */
-$box-shadow                 : 0 4px 10px rgba(0, 0, 0, 0.2); /* Smooth shadow */
-$global-transition          : all 0.25s ease-in-out; /* Smooth animations */
+/* UI Elements */
+$border-color               : #1f2a44; /* Strong navy border */
+$border-hover-color         : #64ffda; /* Neon cyan hover */
+$shadow-color               : rgba(100, 255, 218, 0.2); /* Soft cyan shadow */
+$border-radius              : 8px; /* Rounded corners for modern look */
+$box-shadow                 : 0 4px 10px rgba(0, 0, 0, 0.3); /* Smooth shadows */
+$global-transition          : all 0.3s ease-in-out; /* Smooth hover animations */
 $masthead-height            : 80px;
 $navicon-width              : 30px;
 $navicon-height             : 5px;
@@ -38,8 +41,9 @@ $sidebar-screen-min-width   : 1100px;
 :root {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
-    --global-border-color               : #{$background-light};
-    --global-code-background-color      : #1b2b48; /* Darker navy for code sections */
+    --global-border-color               : #{$border-color};
+    --global-border-hover-color         : #{$border-hover-color};
+    --global-code-background-color      : #1b2b48; /* Dark navy for code sections */
     --global-code-text-color            : #f8f8f2; /* Light text for readability */
     --global-fig-caption-color          : #{$dark-gray};
     --global-link-color                 : #{$link};
