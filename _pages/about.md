@@ -1,7 +1,7 @@
 ---
 permalink: /
 title: "Parsa Hosseini"
-subtitle: "AI Researcher | PhD @ UMD
+subtitle: "AI Researcher | PhD @ UMD"
 author_profile: true
 redirect_from: 
   - /about/
