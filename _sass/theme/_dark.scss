@@ -1,57 +1,49 @@
 /* ==========================================================================
-   ULTIMATE DARK THEME - MODERN & HIGH-CONTRAST
+   HIGH-IMPACT CYBER DARK THEME
    ========================================================================== */
 
-/* Base Colors */
-$gray                       : #aab2bf;
-$dark-gray                  : #2a2f3a;
-$darker-gray                : #1c1f26;
-$light-gray                 : #ccd6f6;
+/* CORE COLORS */
+$black                     : #0a0a0a; /* TRUE BLACK */
+$gray                      : #3a3d41; /* Dark Smoke Gray */
+$darker-gray               : #1c1c1c; /* Even Darker */
+$light-gray                : #e0e0e0; /* Crisp Light Text */
 
-/* Background Colors */
-$background                 : #0a192f; /* Deep navy blue */
-$background-light           : #112240; /* Lighter navy for contrast */
-$background-lighter         : #1b2b48; /* Section highlights */
-$text                       : #e5e9f0; /* Soft white for readability */
-$link                       : #64ffda; /* Neon cyan links */
-$link-dark                  : #36d4b6; /* Slightly darker cyan for hover */
-$link-light                 : #99ffee; /* Softer light cyan for visited links */
+/* BACKGROUND */
+$background                : #000000; /* PURE BLACK for extreme contrast */
+$background-light          : #121212; /* Darker than the void */
+$background-lighter        : #1a1a1a; /* Just a hint of depth */
+$text                      : #ffffff; /* ULTRA WHITE for perfect readability */
+$text-muted                : #b0b0b0; /* Softer secondary text */
 
-/* Accent Colors */
-$danger-color               : #ff5370; /* Vibrant red */
-$info-color                 : #0db9d7; /* Light neon blue */
-$notice-color               : #546e7a; /* Gray-blue for secondary text */
-$success-color              : #26de81; /* Neon green */
-$warning-color              : #ffb300; /* Bright orange */
+/* CYBERPUNK NEON ACCENTS */
+$link                      : #ff007f; /* HOT PINK - Cyber Energy */
+$link-hover                : #ff3fcf; /* Brighter Neon Pink */
+$link-light                : #ff80ff; /* Softer for visited links */
+$highlight                 : #00ffee; /* ELECTRIC CYAN - Contrast */
+$danger                    : #ff3131; /* Bright Red - Alerts */
+$success                   : #00ff99; /* Neon Green */
+$warning                   : #ffcc00; /* Electric Yellow */
 
-/* UI Elements */
-$border-color               : #1f2a44; /* Strong navy border */
-$border-hover-color         : #64ffda; /* Neon cyan hover */
-$shadow-color               : rgba(100, 255, 218, 0.2); /* Soft cyan shadow */
-$border-radius              : 8px; /* Rounded corners for modern look */
-$box-shadow                 : 0 4px 10px rgba(0, 0, 0, 0.3); /* Smooth shadows */
-$global-transition          : all 0.3s ease-in-out; /* Smooth hover animations */
-$masthead-height            : 80px;
-$navicon-width              : 30px;
-$navicon-height             : 5px;
-$sidebar-link-max-width     : 270px;
-$sidebar-screen-min-width   : 1100px;
+/* BORDERS & EFFECTS */
+$border-color              : #3a3d41; /* Muted but visible */
+$border-hover              : #ff007f; /* Pink highlight on hover */
+$shadow-color              : rgba(255, 0, 127, 0.5); /* Glitchy pink glow */
+$border-radius             : 6px; /* Subtle soft edges */
+$box-shadow                : 0 0 10px rgba(255, 0, 127, 0.3); /* Neon glow */
+$global-transition         : all 0.3s ease-in-out; /* Smooth AF */
 
-/* Dark Theme for the Site */
+/* DARK THEME VARIABLES */
 :root {
-    --global-base-color                 : #{$background};
-    --global-bg-color                   : #{$background};
-    --global-border-color               : #{$border-color};
-    --global-border-hover-color         : #{$border-hover-color};
-    --global-code-background-color      : #1b2b48; /* Dark navy for code sections */
-    --global-code-text-color            : #f8f8f2; /* Light text for readability */
-    --global-fig-caption-color          : #{$dark-gray};
-    --global-link-color                 : #{$link};
-    --global-link-color-hover           : #{$link-dark};
-    --global-link-color-visited         : #{$link-light};    
-    --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-lighter};    
-    --global-text-color                 : #{$text};
-    --global-text-color-light           : #{$light-gray};
-    --global-thead-color                : #{$background-lighter};
+    --global-base-color             : #{$background};
+    --global-bg-color               : #{$background};
+    --global-border-color           : #{$border-color};
+    --global-border-hover-color     : #{$border-hover};
+    --global-code-background-color  : #121212;
+    --global-code-text-color        : #{$text-muted};
+    --global-fig-caption-color      : #{$gray};
+    --global-link-color             : #{$link};
+    --global-link-color-hover       : #{$link-hover};
+    --global-link-color-visited     : #{$link-light};    
+    --global-text-color             : #{$text};
+    --global-text-color-light       : #{$text-muted};
 }
