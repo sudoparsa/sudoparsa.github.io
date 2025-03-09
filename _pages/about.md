@@ -10,6 +10,7 @@ redirect_from:
 I am a first-year PhD student in Computer Science at the University of Maryland, advised by **Prof. Soheil Feizi**.  
 My research focuses on **robustness in AI models**. 
 I am particularly interested in understanding the limitations of AI systems and developing methods to detect & mitigate biases.
+
 ---
 
 ## 📰 News & Updates  
