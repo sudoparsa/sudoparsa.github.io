@@ -1,51 +1,51 @@
 /* ==========================================================================
-   DARK THEME
+   COOL DARK THEME
    ========================================================================== */
 
-/* Color codes used for the theme */
-$gray                       : #7a8288;
-$dark-gray                  : mix(#000, $gray, 40%);
-$darker-gray                : mix(#000, $gray, 60%);
-$light-gray                 : mix(#fff, $gray, 50%);
+/* Refined dark color palette */
+$gray                       : #8a8f98;
+$dark-gray                  : #2a2d32;
+$darker-gray                : #1e2025;
+$light-gray                 : #b0b3ba;
 
-$background                 : #474747;
-$background-light           : mix(#fff, $background, 80%);
-$background-lighter         : mix(#fff, $background, 90%);
-$text                       : #ffffff;
-$link                       : #0ea1c5;
-$link-dark                  : mix(#000, $link, 25%);
-$link-light                 : mix(#fff, $link, 25%);
+$background                 : #121212; /* Deep black for a premium feel */
+$background-light           : #1a1a1a; /* Darker gray for contrast */
+$background-lighter         : #242424; /* Slightly lighter for card sections */
+$text                       : #e0e0e0; /* Soft white for readability */
+$link                       : #00bcd4; /* Vibrant cyan-blue for a futuristic touch */
+$link-dark                  : #008ba3; /* Darker cyan for hover effects */
+$link-light                 : #80deea; /* Softer light-blue for visited links */
 
-/* Color codes used for the site */
-$danger-color               : #ee5f5b;
-$info-color                 : #2f7f93;
-$notice-color               : #7a8288;
-$success-color              : #62c462;
-$warning-color              : #f89406;
+/* Accent colors for warnings, notifications, etc. */
+$danger-color               : #ff5370; /* Bright red */
+$info-color                 : #00acc1; /* Teal-blue */
+$notice-color               : #546e7a; /* Muted gray-blue */
+$success-color              : #69f0ae; /* Neon green */
+$warning-color              : #ffb300; /* Bold yellow-orange */
 
-/* Other basic settings for the template */
-$border-radius              : 4px;
-$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$global-transition          : all 0.2s ease-in-out;
-$masthead-height            : 70px;
-$navicon-width              : 28px;
-$navicon-height             : 4px;
-$sidebar-link-max-width     : 250px;
-$sidebar-screen-min-width   : 1024px;
+/* Other UI settings */
+$border-radius              : 6px; /* Slightly rounded corners for a sleek look */
+$box-shadow                 : 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+$global-transition          : all 0.25s ease-in-out; /* Smooth animations */
+$masthead-height            : 80px;
+$navicon-width              : 30px;
+$navicon-height             : 5px;
+$sidebar-link-max-width     : 270px;
+$sidebar-screen-min-width   : 1100px;
 
-/* Dark theme for the site */
+/* Dark theme global styles */
 :root {
     --global-base-color                 : #{$background};
     --global-bg-color                   : #{$background};
     --global-border-color               : #{$background-light};
-    --global-code-background-color      : #fafafa;
-    --global-code-text-color            : #{$darker-gray};
+    --global-code-background-color      : #1e1e1e; /* Darker background for code sections */
+    --global-code-text-color            : #f8f8f2; /* Light text for readability */
     --global-fig-caption-color          : #{$dark-gray};
     --global-link-color                 : #{$link};
     --global-link-color-hover           : #{$link-dark};
     --global-link-color-visited         : #{$link-light};    
     --global-masthead-link-color        : #{$text};
-    --global-masthead-link-color-hover  : #{$background-light};    
+    --global-masthead-link-color-hover  : #{$background-lighter};    
     --global-text-color                 : #{$text};
     --global-text-color-light           : #{$light-gray};
     --global-thead-color                : #{$background-lighter};
