@@ -96,12 +96,10 @@
   img {
     max-width: 175px;
     border-radius: 50%;
-   border: 3px solid #64ffda; /* Adds a cool neon border */
 
     @include breakpoint($large) {
       padding: 5px;
-      //border: 1px solid var(--global-border-color);
-      border: 3px solid #64ffda; /* Adds a cool neon border */
+      border: 1px solid var(--global-border-color);
     }
   }
 }
