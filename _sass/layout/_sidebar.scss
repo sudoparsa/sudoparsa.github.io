@@ -7,9 +7,6 @@
    ========================================================================== */
 
 .sidebar {
-   background: linear-gradient(135deg, #0a192f, #112240); /* Dark blue gradient */
-    padding: 20px;
-    border-radius: 10px;
   -webkit-transform: translate3d(0, 0 , 0);
           transform: translate3d(0, 0 , 0);
 
@@ -193,11 +190,11 @@
   position: absolute;
   right: 0;
   margin-top: 15px;
-  padding: 10px;
+  padding: 20px;
   list-style-type: none;
   border: 1px solid var(--global-border-color);
-  border-radius: $border-radius;
-  background: var(--global-bg-color);
+  border-radius: 10px;
+  background: linear-gradient(135deg, #0a192f, #112240);
   z-index: -1;
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
@@ -206,7 +203,7 @@
     display: block;
     position: relative;
     margin: 0;
-    padding: 0;
+    padding:0;
     border: 0;
     background: transparent;
     box-shadow: none;
