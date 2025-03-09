@@ -96,10 +96,12 @@
   img {
     max-width: 175px;
     border-radius: 50%;
+   border: 3px solid #64ffda; /* Adds a cool neon border */
 
     @include breakpoint($large) {
       padding: 5px;
-      border: 1px solid var(--global-border-color);
+      //border: 1px solid var(--global-border-color);
+      border: 3px solid #64ffda; /* Adds a cool neon border */
     }
   }
 }
@@ -190,11 +192,11 @@
   position: absolute;
   right: 0;
   margin-top: 15px;
-  padding: 20px;
+  padding: 10px;
   list-style-type: none;
   border: 1px solid var(--global-border-color);
-  border-radius: 10px;
-  background: linear-gradient(135deg, #0a192f, #112240);
+  border-radius: $border-radius;
+  background: var(--global-bg-color);
   z-index: -1;
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
