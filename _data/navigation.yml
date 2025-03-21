@@ -22,6 +22,7 @@ main:
     
   - title: "CV"
     url: "https://sudoparsa.github.io/files/CV.pdf"
+    external: true
     #url: /cv/
     
   - title: "Guide"
