@@ -14,6 +14,8 @@ I am particularly interested in understanding the limitations of AI systems and 
 ---
 
 ## 📰 News & Updates  
+🎉 *(Mar 2024)*  **[New Preprint]** "Seeing What's Not There: Spurious Correlation in Multimodal LLMs" – [arXiv](https://arxiv.org/abs/2503.08884) 
+<br>
 📢 *(Dec 2024)*  Co-organizing the "Spurious Correlation and Shortcut Learning Workshop" at ICLR 2025 – [Read more](https://scslworkshop.github.io)  
 <br>
 🎓 *(Aug 2024)*  Started my PhD in Computer Science at the University of Maryland  
