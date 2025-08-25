@@ -25,7 +25,7 @@ My research focuses on failure modes in multimodal large language models, with t
 
 🎉 *(Jun 2024)*  **[New Paper]** "Decompose-and-Compose: A Compositional Approach to Mitigating Spurious Correlation" presented at CVPR 2024 – [Read more](https://cvpr.thecvf.com/virtual/2024/poster/30981) 
 
-> 📌 *Want to collaborate? Reach out via email!*  
+> 📌 *Want to chat? Reach out via email!*  
 
 ---
 
