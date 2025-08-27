@@ -13,7 +13,7 @@ My research focuses on failure modes in multimodal large language models, with t
 ---
 
 ## 📰 News & Updates  
-🎉 *(Aug 2025)*  **[New Paper]** "Gaming Tool Preferences in Agentic LLMs" accepted tp EMNLP 2025 (Main Track) – [arXiv](https://arxiv.org/abs/2505.18135)
+🎉 *(Aug 2025)*  **[New Paper]** "Gaming Tool Preferences in Agentic LLMs" accepted to EMNLP 2025 (Main Track) – [arXiv](https://arxiv.org/abs/2505.18135)
 
 🎉 *(Apr 2025)*  **[New Preprint]** "Chain-of-Defensive-Thought: Structured Reasoning Elicits Robustness in Large Language Models against Reference Corruption" – [arXiv](https://arxiv.org/abs/2504.20769)
 
