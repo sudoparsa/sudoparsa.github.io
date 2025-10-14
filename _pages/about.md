@@ -8,7 +8,7 @@ redirect_from:
 
 ## 🧑‍💻 About Me  
 I am a second-year PhD student in Computer Science at the University of Maryland, advised by **Prof. Soheil Feizi**.  
-My research focuses on failure modes in multimodal large language models, with the broader goal of understanding and improving their reliability.
+My research focuses on failure modes in multimodal large language models, with the broader goal of understanding and improving their reliability. I’m also working on RL-based post-training methods for reasoning and alignment in LLMs.
 
 ---
 
