@@ -13,7 +13,7 @@ My research focuses on failure modes in multimodal large language models, with t
 ---
 
 ## 📰 News & Updates  
-🎉 *(Sep 2025)*  **[New Preprint]** "GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs" – [arXiv](https://arxiv.org/pdf/2509.25178)
+🎉 *(Jan 2026)*  **[New Paper]** "GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs" accepted at ICLR 2026 – [arXiv](https://arxiv.org/pdf/2509.25178)
 
 🎉 *(Aug 2025)*  **[New Paper]** "Gaming Tool Preferences in Agentic LLMs" accepted to EMNLP 2025 (Main Track) – [arXiv](https://arxiv.org/abs/2505.18135)
 
