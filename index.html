@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parsa Hosseini — PhD Student, University of Maryland</title>
+  <meta name="description" content="Parsa Hosseini is a PhD student in Computer Science at the University of Maryland, working on LLM post-training, efficiency, multimodal LLMs, and agentic AI.">
+  <meta property="og:title" content="Parsa Hosseini">
+  <meta property="og:description" content="PhD student in Computer Science at the University of Maryland, advised by Soheil Feizi. Research on LLM post-training, efficiency, multimodal LLMs, and agentic AI.">
+  <meta property="og:url" content="https://sudoparsa.github.io">
+  <meta property="og:image" content="https://sudoparsa.github.io/images/parsa.jpg">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230f4c81'/><text x='50' y='68' font-size='52' font-family='Georgia,serif' fill='white' text-anchor='middle'>P</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fcfcfa;
+      --surface: #ffffff;
+      --text: #1c2430;
+      --text-soft: #4b5563;
+      --text-faint: #8b93a1;
+      --accent: #0f4c81;
+      --accent-soft: #e8f0f8;
+      --border: #e6e8ec;
+      --shadow: 0 1px 3px rgba(18, 32, 51, .05), 0 8px 24px rgba(18, 32, 51, .06);
+      --radius: 14px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1319;
+        --surface: #161c25;
+        --text: #e8eaee;
+        --text-soft: #b3bac5;
+        --text-faint: #7b8494;
+        --accent: #6aa7dd;
+        --accent-soft: #1b2a3d;
+        --border: #262e3a;
+        --shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--accent); color: #fff; }
+
+    .wrap { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+
+    /* Nav */
+    nav {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--bg) 82%, transparent);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      max-width: 880px; margin: 0 auto; padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .nav-name { font-weight: 700; font-size: 1rem; color: var(--text); text-decoration: none; letter-spacing: -.01em; }
+    .nav-links { display: flex; gap: 22px; flex-wrap: wrap; }
+    .nav-links a {
+      color: var(--text-soft); text-decoration: none; font-size: .88rem; font-weight: 500;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+
+    /* Hero */
+    header { padding: 72px 0 56px; }
+    .hero {
+      display: flex; gap: 44px; align-items: center;
+    }
+    .hero-photo {
+      flex-shrink: 0; width: 190px; height: 190px; border-radius: 50%;
+      object-fit: cover; object-position: center 20%;
+      border: 4px solid var(--surface);
+      box-shadow: var(--shadow);
+    }
+    h1 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 2.7rem; font-weight: 700; letter-spacing: -.02em; line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .hero-sub { color: var(--text-soft); font-size: 1.02rem; margin-bottom: 18px; }
+    .hero-sub a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .hero-sub a:hover { text-decoration: underline; }
+
+    .contact-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .contact-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 8px 15px; border-radius: 999px;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); text-decoration: none; font-size: .87rem; font-weight: 500;
+      transition: all .15s;
+    }
+    .contact-btn:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-1px); }
+    .contact-btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .contact-btn.primary:hover { filter: brightness(1.1); color: #fff; }
+    .contact-btn svg { width: 15px; height: 15px; fill: currentColor; }
+
+    /* Sections */
+    section { padding: 30px 0; }
+    h2 {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1.55rem; font-weight: 700; letter-spacing: -.01em;
+      margin-bottom: 22px; display: flex; align-items: center; gap: 12px;
+    }
+    h2::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* About */
+    .about p { color: var(--text-soft); font-size: 1.04rem; max-width: 72ch; }
+    .about p + p { margin-top: 14px; }
+    .about strong { color: var(--text); font-weight: 600; }
+    .about a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .about a:hover { text-decoration: underline; }
+    .interests { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .interest {
+      padding: 5px 13px; border-radius: 999px; font-size: .84rem; font-weight: 500;
+      background: var(--accent-soft); color: var(--accent);
+    }
+
+    /* News */
+    .news-list { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .news-list li {
+      display: grid; grid-template-columns: 92px 1fr; gap: 16px;
+      padding: 9px 12px; border-radius: 10px; transition: background .15s;
+    }
+    .news-list li:hover { background: var(--surface); }
+    .news-date { color: var(--text-faint); font-size: .84rem; font-weight: 600; padding-top: 2px; white-space: nowrap; }
+    .news-body { color: var(--text-soft); font-size: .95rem; }
+    .news-body a { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .news-body a:hover { text-decoration: underline; }
+    .news-body strong { color: var(--text); font-weight: 600; }
+
+    /* Publications */
+    .pub {
+      background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 20px 22px; margin-bottom: 14px; transition: box-shadow .2s, transform .2s;
+    }
+    .pub:hover { box-shadow: var(--shadow); transform: translateY(-1px); }
+    .pub-top { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
+    .pub-title { font-weight: 650; font-size: 1.02rem; line-height: 1.45; }
+    .pub-title a { color: var(--text); text-decoration: none; }
+    .pub-title a:hover { color: var(--accent); }
+    .venue {
+      flex-shrink: 0; font-size: .76rem; font-weight: 700; letter-spacing: .03em;
+      padding: 3px 11px; border-radius: 999px; white-space: nowrap;
+      background: var(--accent-soft); color: var(--accent);
+    }
+    .venue.preprint { background: transparent; border: 1px solid var(--border); color: var(--text-faint); }
+    .pub-authors { color: var(--text-faint); font-size: .89rem; margin-top: 7px; }
+    .pub-authors b { color: var(--text-soft); font-weight: 600; }
+    .pub-links { margin-top: 10px; display: flex; gap: 14px; }
+    .pub-links a { color: var(--accent); text-decoration: none; font-size: .85rem; font-weight: 600; }
+    .pub-links a:hover { text-decoration: underline; }
+    .eq-note { color: var(--text-faint); font-size: .84rem; margin-bottom: 16px; }
+
+    /* Experience & Education */
+    .timeline { display: flex; flex-direction: column; gap: 18px; }
+    .titem { display: grid; grid-template-columns: 150px 1fr; gap: 20px; }
+    .titem-when { color: var(--text-faint); font-size: .86rem; font-weight: 600; padding-top: 2px; }
+    .titem-what { font-weight: 600; font-size: .98rem; }
+    .titem-where { color: var(--text-soft); font-size: .92rem; }
+    .titem-note { color: var(--text-faint); font-size: .88rem; margin-top: 3px; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+
+    /* Misc list */
+    .misc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .misc-list li { color: var(--text-soft); font-size: .94rem; padding-left: 20px; position: relative; }
+    .misc-list li::before { content: '▸'; position: absolute; left: 0; color: var(--accent); }
+    .misc-list b { color: var(--text); font-weight: 600; }
+
+    footer {
+      margin-top: 48px; padding: 32px 0 44px; border-top: 1px solid var(--border);
+      color: var(--text-faint); font-size: .86rem; text-align: center;
+    }
+    footer a { color: var(--text-soft); text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 720px) {
+      header { padding: 44px 0 36px; }
+      .hero { flex-direction: column; text-align: center; gap: 24px; }
+      .hero-photo { width: 150px; height: 150px; }
+      h1 { font-size: 2.1rem; }
+      .contact-row { justify-content: center; }
+      .nav-links { gap: 14px; }
+      .nav-links a:nth-child(n+5) { display: none; }
+      .pub-top { flex-direction: column; gap: 8px; }
+      .two-col { grid-template-columns: 1fr; }
+      .titem { grid-template-columns: 1fr; gap: 2px; }
+      .news-list li { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a class="nav-name" href="#">Parsa Hosseini</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="files/CV.pdf">CV</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header>
+    <div class="hero">
+      <img class="hero-photo" src="images/parsa.jpg" alt="Portrait of Parsa Hosseini">
+      <div>
+        <h1>Parsa Hosseini</h1>
+        <p class="hero-sub">
+          PhD Student in Computer Science · <a href="https://www.cs.umd.edu/" target="_blank" rel="noopener">University of Maryland</a><br>
+          Advised by <a href="https://www.cs.umd.edu/~sfeizi/" target="_blank" rel="noopener">Soheil Feizi</a>, Reliable AI Lab
+        </p>
+        <div class="contact-row">
+          <a class="contact-btn primary" href="mailto:phoseini@umd.edu">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4.24-8 5-8-5V6l8 5 8-5v2.24z"/></svg>
+            phoseini@umd.edu
+          </a>
+          <a class="contact-btn" href="https://scholar.google.com/citations?user=4QnHQqgAAAAJ&hl=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 3 1 9l4 2.18v6L12 21l7-3.82v-6l2-1.09V17h2V9L12 3zm6.82 6L12 12.72 5.18 9 12 5.28 18.82 9zM17 15.99l-5 2.73-5-2.73v-3.72L12 15l5-2.73v3.72z"/></svg>
+            Scholar
+          </a>
+          <a class="contact-btn" href="https://github.com/sudoparsa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55v-2.17c-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.11-.74.4-1.25.73-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            GitHub
+          </a>
+          <a class="contact-btn" href="https://www.linkedin.com/in/p-hosseini" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V10.2H5.67v8.14h2.67zM7 9.09a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.25v-4.47c0-2.4-1.28-3.51-2.99-3.51-1.38 0-2 .76-2.35 1.29V10.2h-2.66c.04.75 0 8.14 0 8.14H13v-4.55c0-.24.02-.48.09-.66.19-.48.63-.98 1.37-.98.96 0 1.35.74 1.35 1.81v4.38h2.53z"/></svg>
+            LinkedIn
+          </a>
+          <a class="contact-btn" href="https://x.com/paahrsa" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"/></svg>
+            Twitter
+          </a>
+          <a class="contact-btn" href="files/CV.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
+            CV
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I am a PhD student in Computer Science at the <strong>University of Maryland</strong>, advised by
+      <a href="https://www.cs.umd.edu/~sfeizi/" target="_blank" rel="noopener">Soheil Feizi</a> in the Reliable AI Lab.
+      My research focuses on <strong>post-training and efficiency of large language models</strong> — including
+      RL-based methods for reasoning and alignment, and making long-form reasoning cheaper — as well as
+      <strong>failure modes of multimodal LLMs</strong> and <strong>tool use in agentic AI</strong>, with the broader
+      goal of understanding and improving the reliability of modern AI systems.
+    </p>
+    <p>
+      In summer 2026 I am a research intern at <strong>Capital One</strong> in New York, working on efficient
+      reasoning and LLM post-training. Before my PhD, I received my Bachelor's degree in Computer Engineering from
+      <strong>Sharif University of Technology</strong>.
+    </p>
+    <div class="interests">
+      <span class="interest">LLM Post-Training</span>
+      <span class="interest">LLM Efficiency</span>
+      <span class="interest">Multimodal LLMs</span>
+      <span class="interest">Agentic AI &amp; Tool Use</span>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>News</h2>
+    <ul class="news-list">
+      <li>
+        <span class="news-date">Jul 2026</span>
+        <span class="news-body">Our paper <strong>"Your LLM Agents are Temporally Blind"</strong> was accepted to <strong>ACL 2026 Findings</strong> — <a href="https://arxiv.org/abs/2510.23853" target="_blank" rel="noopener">arXiv</a></span>
+      </li>
+      <li>
+        <span class="news-date">Jun 2026</span>
+        <span class="news-body">Started a research internship at <strong>Capital One</strong> in New York, working on efficient reasoning and LLM post-training</span>
+      </li>
+      <li>
+        <span class="news-date">Apr 2026</span>
+        <span class="news-body">New preprint: <strong>"Early Stopping for Large Reasoning Models via Confidence Dynamics"</strong> (CoDE-Stop) — <a href="https://arxiv.org/abs/2604.04930" target="_blank" rel="noopener">arXiv</a></span>
+      </li>
+      <li>
+        <span class="news-date">Jan 2026</span>
+        <span class="news-body"><strong>"GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs"</strong> was accepted at <strong>ICLR 2026</strong> — <a href="https://arxiv.org/abs/2509.25178" target="_blank" rel="noopener">arXiv</a></span>
+      </li>
+      <li>
+        <span class="news-date">2025</span>
+        <span class="news-body"><strong>"SpurLens: Automatic Detection of Spurious Cues in Multimodal LLMs"</strong> was accepted to <strong>TMLR</strong> — <a href="https://arxiv.org/abs/2503.08884" target="_blank" rel="noopener">arXiv</a></span>
+      </li>
+      <li>
+        <span class="news-date">Aug 2025</span>
+        <span class="news-body"><strong>"Gaming Tool Preferences in Agentic LLMs"</strong> was accepted to <strong>EMNLP 2025</strong> (Main Track) — <a href="https://arxiv.org/abs/2505.18135" target="_blank" rel="noopener">arXiv</a></span>
+      </li>
+      <li>
+        <span class="news-date">Dec 2024</span>
+        <span class="news-body">Co-organizing the <a href="https://scslw-iclr.github.io/" target="_blank" rel="noopener">Workshop on Spurious Correlation and Shortcut Learning</a> at <strong>ICLR 2025</strong></span>
+      </li>
+      <li>
+        <span class="news-date">Aug 2024</span>
+        <span class="news-body">Started my <strong>PhD in Computer Science</strong> at the University of Maryland 🎓</span>
+      </li>
+      <li>
+        <span class="news-date">Jun 2024</span>
+        <span class="news-body"><strong>"Decompose-and-Compose"</strong> was presented at <strong>CVPR 2024</strong> — <a href="https://arxiv.org/abs/2402.18919" target="_blank" rel="noopener">arXiv</a></span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="publications">
+    <h2>Publications</h2>
+    <p class="eq-note">* denotes equal contribution</p>
+
+    <div class="pub">
+      <div class="pub-top">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2604.04930" target="_blank" rel="noopener">Early Stopping for Large Reasoning Models via Confidence Dynamics</a></div>
+        <span class="venue preprint">Preprint</span>
+      </div>
+      <div class="pub-authors"><b>Parsa Hosseini*</b>, Sumit Nawathe*, Mahdi Salmani*, Meisam Razaviyayn, Soheil Feizi</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2604.04930" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://github.com/sudoparsa/CoDE-Stop" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-top">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2510.23853" target="_blank" rel="noopener">Your LLM Agents are Temporally Blind: The Misalignment Between Tool Use Decisions and Human Time Perception</a></div>
+        <span class="venue">ACL 2026 Findings</span>
+      </div>
+      <div class="pub-authors">Yize Cheng*, Arshia Soltani Moakhar*, Chenrui Fan*, <b>Parsa Hosseini</b>, Kazem Faghih, Zahra Sodagar, Wenxiao Wang, Soheil Feizi</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2510.23853" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://aclanthology.org/2026.findings-acl.1848/" target="_blank" rel="noopener">ACL Anthology</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-top">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2509.25178" target="_blank" rel="noopener">GHOST: Hallucination-Inducing Image Generation for Multimodal LLMs</a></div>
+        <span class="venue">ICLR 2026</span>
+      </div>
+      <div class="pub-authors">Aryan Yazdan Parast*, <b>Parsa Hosseini*</b>, Hesam Asadollahzadeh, Arshia Soltani Moakhar, Basim Azam, Soheil Feizi, Naveed Akhtar</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2509.25178" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-top">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2503.08884" target="_blank" rel="noopener">SpurLens: Automatic Detection of Spurious Cues in Multimodal LLMs</a></div>
+        <span class="venue">TMLR</span>
+      </div>
+      <div class="pub-authors"><b>Parsa Hosseini*</b>, Sumit Nawathe*, Mazda Moayeri, Sriram Balasubramanian, Soheil Feizi</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2503.08884" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-top">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2505.18135" target="_blank" rel="noopener">Gaming Tool Preferences in Agentic LLMs</a></div>
+        <span class="venue">EMNLP 2025</span>
+      </div>
+      <div class="pub-authors">Kazem Faghih*, Wenxiao Wang*, Yize Cheng*, Siddhant Bharti, Gaurang Sriramanan, Sriram Balasubramanian, <b>Parsa Hosseini</b>, Soheil Feizi</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2505.18135" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-top">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2504.20769" target="_blank" rel="noopener">Chain-of-Defensive-Thought: Structured Reasoning Elicits Robustness in Large Language Models against Reference Corruption</a></div>
+        <span class="venue preprint">Preprint</span>
+      </div>
+      <div class="pub-authors">Wenxiao Wang*, <b>Parsa Hosseini*</b>, Soheil Feizi</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2504.20769" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+
+    <div class="pub">
+      <div class="pub-top">
+        <div class="pub-title"><a href="https://arxiv.org/abs/2402.18919" target="_blank" rel="noopener">Decompose-and-Compose: A Compositional Approach to Mitigating Spurious Correlation</a></div>
+        <span class="venue">CVPR 2024</span>
+      </div>
+      <div class="pub-authors">Fahimeh Hosseini Noohdani, <b>Parsa Hosseini*</b>, Aryan Yazdan Parast*, Hamidreza Yaghoubi Araghi, Mahdieh Soleymani Baghshah</div>
+      <div class="pub-links">
+        <a href="https://arxiv.org/abs/2402.18919" target="_blank" rel="noopener">arXiv</a>
+        <a href="https://openaccess.thecvf.com/content/CVPR2024/html/Noohdani_Decompose-and-Compose_A_Compositional_Approach_to_Mitigating_Spurious_Correlation_CVPR_2024_paper.html" target="_blank" rel="noopener">CVPR</a>
+        <a href="https://github.com/fhn98/DaC" target="_blank" rel="noopener">Code</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="titem">
+        <div class="titem-when">Aug 2024 – Present</div>
+        <div>
+          <div class="titem-what">Graduate Research Assistant</div>
+          <div class="titem-where">Reliable AI Lab, University of Maryland · Advisor: Soheil Feizi</div>
+          <div class="titem-note">Efficient LLM reasoning, multimodal LLMs, tool use in agentic AI</div>
+        </div>
+      </div>
+      <div class="titem">
+        <div class="titem-when">Summer 2026</div>
+        <div>
+          <div class="titem-what">Research Intern</div>
+          <div class="titem-where">Capital One, New York · Mentor: Nima Chitsazan</div>
+          <div class="titem-note">Efficient reasoning, LLM post-training</div>
+        </div>
+      </div>
+      <div class="titem">
+        <div class="titem-when">Summer 2023</div>
+        <div>
+          <div class="titem-what">Research Intern</div>
+          <div class="titem-where">Okinawa Institute of Science and Technology, Japan · Mentors: Makoto Yamada, Mohammad Sabokrou</div>
+          <div class="titem-note">Trustworthy ML, continual learning</div>
+        </div>
+      </div>
+      <div class="titem">
+        <div class="titem-when">Sep 2022 – Jan 2024</div>
+        <div>
+          <div class="titem-what">Undergraduate Research Assistant</div>
+          <div class="titem-where">ML Lab, Sharif University of Technology · Advisor: Mahdieh Soleymani Baghshah</div>
+          <div class="titem-note">Out-of-distribution generalization, spurious correlation</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="two-col">
+      <div id="education">
+        <h2>Education</h2>
+        <div class="timeline">
+          <div class="titem" style="grid-template-columns: 1fr;">
+            <div>
+              <div class="titem-what">PhD in Computer Science</div>
+              <div class="titem-where">University of Maryland</div>
+              <div class="titem-note">Aug 2024 – Present · Advisor: Soheil Feizi</div>
+            </div>
+          </div>
+          <div class="titem" style="grid-template-columns: 1fr;">
+            <div>
+              <div class="titem-what">MSc in Computer Science</div>
+              <div class="titem-where">University of Maryland</div>
+              <div class="titem-note">Aug 2024 – Jun 2026 · GPA: 4.0/4.0</div>
+            </div>
+          </div>
+          <div class="titem" style="grid-template-columns: 1fr;">
+            <div>
+              <div class="titem-what">BSc in Computer Engineering</div>
+              <div class="titem-where">Sharif University of Technology</div>
+              <div class="titem-note">Sep 2019 – Feb 2024 · GPA: 19.03/20</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="service">
+        <h2>Awards &amp; Service</h2>
+        <ul class="misc-list">
+          <li><b>Dean's Fellowship</b>, Dept. of Computer Science, University of Maryland (2024, 2025)</li>
+          <li><b>Gold medal</b>, Iranian Mathematical Olympiad (2018)</li>
+          <li><b>Silver medal</b>, Iranian Geometry Olympiad (2018)</li>
+          <li><b>Co-organizer</b>, Workshop on Spurious Correlation and Shortcut Learning @ ICLR 2025</li>
+          <li><b>Reviewer</b>: NeurIPS, ICLR, ICML, ACL, COLM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Parsa Hosseini · <a href="mailto:phoseini@umd.edu">phoseini@umd.edu</a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
