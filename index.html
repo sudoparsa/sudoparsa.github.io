@@ -25,6 +25,8 @@
       --border: #e6e8ec;
       --shadow: 0 1px 3px rgba(18, 32, 51, .05), 0 8px 24px rgba(18, 32, 51, .06);
       --radius: 14px;
+      --spotlight-bg: #f3e6bf;
+      --spotlight-fg: #7a5410;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -37,6 +39,8 @@
         --accent-soft: #1b2a3d;
         --border: #262e3a;
         --shadow: 0 1px 3px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+        --spotlight-bg: #3a2e14;
+        --spotlight-fg: #e6c56a;
       }
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -150,12 +154,14 @@
     .pub-title { font-weight: 650; font-size: 1.02rem; line-height: 1.45; }
     .pub-title a { color: var(--text); text-decoration: none; }
     .pub-title a:hover { color: var(--accent); }
+    .pub-venues { display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 6px; flex-shrink: 0; }
     .venue {
       flex-shrink: 0; font-size: .76rem; font-weight: 700; letter-spacing: .03em;
       padding: 3px 11px; border-radius: 999px; white-space: nowrap;
       background: var(--accent-soft); color: var(--accent);
     }
     .venue.preprint { background: transparent; border: 1px solid var(--border); color: var(--text-faint); }
+    .venue.spotlight { background: var(--spotlight-bg); color: var(--spotlight-fg); }
     .pub-authors { color: var(--text-faint); font-size: .89rem; margin-top: 7px; }
     .pub-authors b { color: var(--text-soft); font-weight: 600; }
     .pub-links { margin-top: 10px; display: flex; gap: 14px; }
@@ -195,6 +201,7 @@
       .nav-links { gap: 14px; }
       .nav-links a:nth-child(n+5) { display: none; }
       .pub-top { flex-direction: column; gap: 8px; }
+      .pub-venues { justify-content: flex-start; }
       .two-col { grid-template-columns: 1fr; }
       .titem { grid-template-columns: 1fr; gap: 2px; }
       .news-list li { grid-template-columns: 1fr; gap: 2px; }
@@ -337,7 +344,10 @@ modern AI systems. Before my PhD, I received my Bachelor's degree in Computer En
     <div class="pub">
       <div class="pub-top">
         <div class="pub-title"><a href="https://arxiv.org/abs/2604.04930" target="_blank" rel="noopener">Early Stopping for Large Reasoning Models via Confidence Dynamics</a></div>
-        <span class="venue">Efficient Reasoning @ COLM 2026</span>
+        <div class="pub-venues">
+          <span class="venue">Efficient Reasoning @ COLM 2026</span>
+          <span class="venue spotlight">Spotlight</span>
+        </div>
       </div>
       <div class="pub-authors"><b>Parsa Hosseini*</b>, Sumit Nawathe*, Mahdi Salmani*, Meisam Razaviyayn, Soheil Feizi</div>
       <div class="pub-links">
